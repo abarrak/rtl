@@ -1,15 +1,15 @@
-require './test_helper'
+require 'test_helper'
 
 class RtlTest < Minitest::Test
   include Rtl
 
   def setup
-    @iso_codes = Rtl::ISO_CODES
-    @iso_long_codes = Rtl::ISO_LONG_CODES
-    @iso_numbers = Rtl::ISO_NUMBERS
-    @unicode_aliases = Rtl::UNICODE_ALIASES
-    @full_names = Rtl::FULL_NAMES
-    @wrong_lang = ["en", "fr", "de", "Spanish", 420]
+    @iso_codes        = Rtl::ISO_CODES
+    @iso_long_codes   = Rtl::ISO_LONG_CODES
+    @iso_numbers      = Rtl::ISO_NUMBERS
+    @unicode_aliases  = Rtl::UNICODE_ALIASES
+    @full_names       = Rtl::FULL_NAMES
+    @wrong_lang       = ["en", "fr", "de", "Spanish", 420]
   end
 
   def test_respond_corretly_for_iso_codes
@@ -55,6 +55,17 @@ class RtlTest < Minitest::Test
     end
 
     @wrong_lang.each { |w| assert !Rtl.rtl?(w, :full_name) }
+  end
+
+  def test_can_make_exhasutive_search
+    [@iso_codes, @iso_long_codes, @iso_numbers, @unicode_aliases, @full_names].each do |set|
+      set.each do |el|
+        assert Rtl.rtl? el, :all
+        assert Rtl.rtl? el.to_sym, :all
+      end
+    end
+
+    @wrong_lang.each { |w| assert !Rtl.rtl?(w, :all) }
   end
 
   def test_get_iso_codes_languages
