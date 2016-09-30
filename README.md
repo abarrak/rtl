@@ -29,32 +29,38 @@ $ gem install rtl
 require 'rtl'
 
 # Query a language by string or symbol.
-Rtl.rtl? 'ar'   #=> true
-Rtl.rtl? :ara    #=> true
+Rtl.rtl? 'ar'                      #=> true
+Rtl.rtl? :ara                      #=> true
+
 
 # By ISO 639 code, (The default) ..
-Rtl.rtl? :syc, :iso_code    #=> true
-Rtl.rtl? :eng               #=> false
+Rtl.rtl? :syc, :iso_code           #=> true
+Rtl.rtl? :eng                      #=> false
+
 
 # By ISO 15924 code .. 
-Rtl.rtl? 'Hung', :iso_long_code   #=> true
+Rtl.rtl? 'Hung', :iso_long_code    #=> true
+
 
 # By ISO number ..
-Rtl.rtl? 130, :iso_number   #=> true
+Rtl.rtl? 130, :iso_number          #=> true
+
 
 # By unicode alias ..
-Rtl.rtl? 'Hebrew', :unicode_alias   #=> true
+Rtl.rtl? 'Hebrew', :unicode_alias  #=> true
+
 
 # By full name ..
-Rtl.rtl? :Persian, :full_name   #=> true
+Rtl.rtl? :Persian, :full_name      #=> true
+
 
 # Get List of all languages by any of the above criteria
 Rtl.rtl_languages
-#=> ["ar", "ara", "arc", "ae", "ave", "egy", "he", "heb", "nqo", "pal", "phn", "sam", "syc", "syr", "fa", "per", 
-     "fas", "ku", "kur"]
+#=> ["ar", "ara", "arc", "ae", "ave", "egy", "he", "heb", "nqo", "pal", "phn", "sam", "syc", "syr", "fa", "per", "fas", "ku", "kur"]
 
 Rtl.rtl_languages :iso_long_code
 #=> ...
+
 ```
 
 ## Useful Links
