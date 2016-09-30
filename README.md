@@ -1,4 +1,6 @@
-# Rtl
+# RTL
+[![Build Status](https://travis-ci.org/abarrak/rtl.svg?branch=master)](https://travis-ci.org/abarrak/rtl)
+
 This gem helps you in checking whether a language is written from right-to-left (RTL) or vise versa.
 
 ## Installation
