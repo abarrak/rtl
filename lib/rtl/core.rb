@@ -66,8 +66,13 @@ module Rtl
   def self.rtl_languages scheme = :iso_code
     sch = scheme.to_s
     s = sch.end_with?('s') ? 'ES' : 'S'
-    member = "#{sch.to_s.upcase}#{s}".to_sym
-    self.const_get member
+    member = "#{sch.upcase}#{s}".to_sym
+
+    begin
+      self.const_get member
+    rescue NameError
+      raise ArgumentError.new "Unknown Supplied scheme #{sch}."
+    end
   end
 
   private

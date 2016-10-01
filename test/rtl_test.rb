@@ -70,6 +70,7 @@ class RtlTest < Minitest::Test
 
   def test_get_iso_codes_languages
     assert_equal Rtl.rtl_languages, @iso_codes
+    assert_equal Rtl.rtl_languages(:iso_code), @iso_codes
   end
 
   def test_get_iso_long_codes_languages
@@ -86,5 +87,11 @@ class RtlTest < Minitest::Test
 
   def test_get_full_names_languages
     assert_equal Rtl.rtl_languages(:full_name), @full_names
+  end
+
+  def test_get_report_invalid_scheme_arg
+    [:langs, :iso].each do |arg|
+      assert_raises(ArgumentError) { Rtl.rtl_languages arg }
+    end
   end
 end
