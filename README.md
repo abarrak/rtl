@@ -26,7 +26,7 @@ $ gem install rtl
 
 ## Usage
 
-### Query a language by string or symbol:
+#### Query a language by string or symbol:
 
 ```ruby
 require 'rtl'
@@ -35,37 +35,37 @@ Rtl.rtl? 'ar'                      #=> true
 Rtl.rtl? :ara                      #=> true
 ```
 
-### Query a language by ISO 639 code, (the default) ..
+#### Query a language by ISO 639 code, (the default) ..
 
 ```ruby
 Rtl.rtl? :syc, :iso_code           #=> true
 Rtl.rtl? :eng                      #=> false
 ```
 
-### Or by ISO 15924 code .. 
+#### Or by ISO 15924 code .. 
 
 ```ruby
 Rtl.rtl? 'Hung', :iso_long_code    #=> true
 ```
 
-### Or by ISO number ..
+#### Or by ISO number ..
 
 ```ruby
 Rtl.rtl? 130, :iso_number          #=> true
 ```
 
-### Or by unicode alias ..
+#### Or by unicode alias ..
 ```ruby
 Rtl.rtl? 'Hebrew', :unicode_alias  #=> true
 ```
 
-### Or by full name ..
+#### Or by full name ..
 
 ```ruby
 Rtl.rtl? :Persian, :full_name      #=> true
 ```
 
-### Get List of all languages by any of the above criteria:
+#### Get List of all languages by any of the above criteria:
 
 ```ruby
 Rtl.rtl_languages
