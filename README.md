@@ -1,4 +1,5 @@
 # RTL
+[![Gem Version](https://badge.fury.io/rb/rtl.svg)](https://badge.fury.io/rb/rtl)
 [![Build Status](https://travis-ci.org/abarrak/rtl.svg?branch=master)](https://travis-ci.org/abarrak/rtl)
 
 This gem helps you check whether a language direction is right-to-left (RTL) or left-to-right (LTR) implicitly, by supplying its full name, iso code, or other options.
