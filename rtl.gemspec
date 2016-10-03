@@ -2,11 +2,12 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rtl/version'
+require 'date'
 
 Gem::Specification.new do |spec|
   spec.name          = "rtl"
   spec.version       = Rtl::VERSION
-  spec.date          = '2016-10-01'
+  spec.date          = Date.today.to_s
   spec.authors       = ["Abdullah Barrak (abarrak)"]
   spec.email         = ["a@abarrak.com"]
 
