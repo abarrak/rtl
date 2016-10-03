@@ -56,7 +56,7 @@ module Rtl
       when :full_name
         self.full_names l
       when :all
-        all l
+        self.all l
       else
         raise ArgumentError.new "Unknown base value #{base}."
     end
