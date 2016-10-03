@@ -65,6 +65,13 @@ Rtl.rtl? 'Hebrew', :unicode_alias  #=> true
 Rtl.rtl? :Persian, :full_name      #=> true
 ```
 
+#### Or check all ways ..
+
+```ruby
+Rtl.rtl? :kur, :all      #=> true
+```
+
+
 #### Get List of all languages by any of the above criteria:
 
 ```ruby
