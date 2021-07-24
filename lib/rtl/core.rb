@@ -40,7 +40,7 @@ module Rtl
                      "Thaana"]
 
   # Query whether a language is rtl or not.
-  def self.rtl? language, scheme = :iso_code
+  def self.rtl? language, scheme = :all
     sch = scheme.to_sym
     l = language.to_s.strip
 
@@ -58,7 +58,7 @@ module Rtl
       when :all
         self.all l
       else
-        raise ArgumentError.new "Unknown base value #{base}."
+        raise ArgumentError.new "Unknown scheme value #{scheme}."
     end
   end
 
@@ -71,7 +71,7 @@ module Rtl
     begin
       self.const_get member
     rescue NameError
-      raise ArgumentError.new "Unknown Supplied scheme #{sch}."
+      raise ArgumentError.new "Unknown Supplied scheme #{scheme}."
     end
   end
 

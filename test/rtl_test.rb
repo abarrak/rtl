@@ -14,7 +14,7 @@ class RtlTest < Minitest::Test
 
   def test_respond_corretly_for_iso_codes
     @iso_codes.each do |code|
-      assert Rtl.rtl? code
+      assert Rtl.rtl? code, :iso_code
       assert Rtl.rtl? code.to_sym, :iso_code
     end
 
@@ -89,9 +89,15 @@ class RtlTest < Minitest::Test
     assert_equal Rtl.rtl_languages(:full_name), @full_names
   end
 
-  def test_get_report_invalid_scheme_arg
-    [:langs, :iso].each do |arg|
-      assert_raises(ArgumentError) { Rtl.rtl_languages arg }
+  def test_reports_invalid_scheme_is_passed
+    [:my_langs, :iso_special].each do |sch|
+      assert_raises(ArgumentError) { Rtl.rtl_languages sch }
+    end
+  end
+
+  def test_raises_error_in_case_incorrect_scheme_is_passed
+    [:my_codes, :iso_777].each do |sch|
+      assert_raises(ArgumentError) { Rtl.rtl? :en, sch }
     end
   end
 end

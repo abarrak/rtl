@@ -1,6 +1,8 @@
 # RTL
 [![Gem Version](https://badge.fury.io/rb/rtl.svg)](https://rubygems.org/gems/rtl)
 [![Build Status](https://travis-ci.org/abarrak/rtl.svg?branch=master)](https://travis-ci.org/abarrak/rtl)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e6e976b150ddabbc4665/test_coverage)](https://codeclimate.com/github/abarrak/rtl/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e6e976b150ddabbc4665/maintainability)](https://codeclimate.com/github/abarrak/rtl/maintainability)
 
 This gem helps you check whether a language direction is right-to-left (RTL) or left-to-right (LTR) implicitly, by supplying its full name, iso code, or other options.
 
@@ -70,6 +72,8 @@ Rtl.rtl? :Persian, :full_name      #=> true
 ```ruby
 Rtl.rtl? :kur, :all      #=> true
 ```
+
+Which is the default, in case no scheme criteria is specified.
 
 
 #### Get List of all languages by any of the above criteria:

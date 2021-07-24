@@ -1,5 +1,10 @@
 # RTL Gem Changelog
 
+## [0.4.0] - 2021-07-24
+- Make querying by :all criteria as the default for convenience instead of iso_code only [@abarrak](https://github.com/abarrak).
+- Bug fix on error reporting in case incorrect scheme option is passed [@abarrak](https://github.com/abarrak).
+
+
 ## [0.3.0] - 2021-07-24
 - Update development dependencies to latest versions [@abarrak](https://github.com/abarrak).
 
