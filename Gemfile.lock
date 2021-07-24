@@ -1,0 +1,22 @@
+PATH
+  remote: .
+  specs:
+    rtl (0.3.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.14.4)
+    rake (13.0.6)
+
+PLATFORMS
+  x86_64-darwin-18
+
+DEPENDENCIES
+  bundler (~> 2.2.20)
+  minitest (~> 5)
+  rake (~> 13)
+  rtl!
+
+BUNDLED WITH
+   2.2.24
