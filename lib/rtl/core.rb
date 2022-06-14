@@ -9,12 +9,13 @@ module Rtl
                 "Inscriptional Pahlavi", "Psalter Pahlavi", "Book Pahlavi", "Phoenician",
                 "Inscriptional Parthian", "Samaritan", "Old South Arabian", "Syriac",
                 "Syriac (Estrangelo variant)", "Syriac (Western variant)",
-                "Syriac (Eastern variant)", "Thaana", "Woleai", "Persian", "Kurdish", "Urdu", "Pashto (Pushto)"]
+                "Syriac (Eastern variant)", "Thaana", "Woleai", "Persian", "Kurdish", "Urdu",
+                "Pashto (Pushto)", "Yiddish"]
 
   # ISO 639 codes for RTL languages.
   # If a language has 639-1 and 639-2 codes, both are included.
   ISO_CODES = ["ar", "ara", "arc", "ae", "ave", "egy", "he", "heb", "nqo", "pal", "phn", "sam",
-               "syc", "syr", "fa", "per", "fas", "ku", "kur", "ur", "urd", "pus", "ps"]
+               "syc", "syr", "fa", "per", "fas", "ku", "kur", "ur", "urd", "pus", "ps", "yi", "yid"]
 
   # ISO 15924 codes for RTL languages.
   ISO_LONG_CODES = ['Adlm', 'Arab', 'Aran', 'Armi', 'Avst', 'Cprt', 'Egyd', 'Egyh', 'Hatr',
